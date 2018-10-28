@@ -34,6 +34,7 @@ class Task: NSObject, NSCopying {
         let copyTask = Task(id: self.id, task: self.task!)
         copyTask.completed = self.completed
         
+        print(1)
         return copyTask
     }
 }
