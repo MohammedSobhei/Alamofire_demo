@@ -74,6 +74,7 @@ class API: NSObject {
 
     class Tasks {
 
+        
         static func editTask(task: Task, completion: @escaping (_ task: Task?, _ error: Error?) -> Void) {
             guard let api_token = Helper.getApiToken() else {
                 completion(nil, nil)
