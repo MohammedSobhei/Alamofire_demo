@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        let def = UserDefaults.standard
+//        if let api_token = def.object(forKey: "api_token") as? String{
+
+        if let api_token = Helper.getApiToken(){
+            //skip login screen
+            //go to main screen
+            
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "main")
+            print(api_token)
+        }
         return true
     }
 
