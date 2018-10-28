@@ -147,7 +147,6 @@ extension TaskVC: UITableViewDataSource {
         let task = tasks[indexPath.row]
         cell.configureCell(task: task)
         
-        print(1)
         return cell
     }
 
